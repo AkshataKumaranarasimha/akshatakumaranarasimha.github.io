@@ -1,57 +1,363 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Akshata Kumaranarasimha | QA Lead</title>
+  <meta name="description" content="Akshata Kumaranarasimha — QA Lead / SDET specializing in Python automation and AI/LLM quality (RAG, drift, semantic validation)." />
+  <title>Akshata Kumaranarasimha | QA Lead / SDET</title>
+
   <style>
-    body{font-family:system-ui;max-width:900px;margin:40px auto;padding:0 16px;line-height:1.6}
-    .row{display:flex;gap:12px;flex-wrap:wrap}
-    .card{border:1px solid #ddd;border-radius:14px;padding:16px;flex:1;min-width:260px}
-    a{color:#0b57d0;text-decoration:none}
-    .btn{display:inline-block;border:1px solid #0b57d0;border-radius:10px;padding:8px 12px;margin-right:8px}
-    ul{margin:8px 0 0 18px}
+    :root{
+      --bg:#0b1220;
+      --card:#0f1b2e;
+      --card2:#101f36;
+      --text:#e8eefc;
+      --muted:#b7c4e1;
+      --border:rgba(255,255,255,.10);
+      --accent:#67e8f9;
+      --accent2:#a78bfa;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 10% 10%, rgba(103,232,249,.15), transparent 60%),
+        radial-gradient(900px 500px at 80% 20%, rgba(167,139,250,.16), transparent 60%),
+        linear-gradient(180deg, #070b14, var(--bg));
+    }
+
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:980px; margin:0 auto; padding:28px 16px 60px}
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      margin-bottom:18px;
+    }
+    .brand{
+      display:flex; gap:10px; align-items:center;
+      font-weight:700; letter-spacing:.2px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 6px rgba(103,232,249,.08);
+    }
+
+    .hero{
+      border:1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+      border-radius:24px;
+      padding:22px;
+      overflow:hidden;
+      position:relative;
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(500px 180px at 30% 0%, rgba(103,232,249,.18), transparent 60%),
+                  radial-gradient(520px 200px at 80% 20%, rgba(167,139,250,.18), transparent 62%);
+      pointer-events:none;
+    }
+
+    .hero-inner{
+      position:relative;
+      display:flex; gap:18px; align-items:center; flex-wrap:wrap;
+    }
+
+    .avatar{
+      width:120px; height:120px; border-radius:22px;
+      object-fit:cover;
+      border:1px solid var(--border);
+      box-shadow: 0 12px 24px rgba(0,0,0,.25);
+      background: rgba(255,255,255,.06);
+    }
+
+    .title{
+      flex:1; min-width:260px;
+    }
+    h1{
+      margin:0 0 6px 0;
+      font-size:28px;
+      line-height:1.15;
+      letter-spacing:.2px;
+    }
+    .subtitle{
+      margin:0 0 14px 0;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .pill-row{display:flex; flex-wrap:wrap; gap:10px; margin:10px 0 0}
+    .pill{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      padding:7px 10px;
+      border-radius:999px;
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    .cta{
+      display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.05);
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      font-size:14px;
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.18);
+    }
+    .btn.primary{
+      border: none;
+      background: linear-gradient(135deg, rgba(103,232,249,.95), rgba(167,139,250,.95));
+      color:#06101a;
+      font-weight:700;
+    }
+    .btn.primary:hover{filter:brightness(1.02)}
+    .btn small{opacity:.8}
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:14px;
+      margin-top:14px;
+    }
+    @media (max-width: 860px){
+      .grid{grid-template-columns:1fr}
+    }
+
+    .card{
+      border:1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border-radius:20px;
+      padding:16px;
+      box-shadow: 0 10px 24px rgba(0,0,0,.18);
+    }
+    .card h2{
+      margin:0 0 10px 0;
+      font-size:16px;
+      letter-spacing:.2px;
+    }
+    .muted{color:var(--muted)}
+    .list{
+      margin:0; padding-left:18px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.55;
+    }
+
+    .projects{
+      margin-top:16px;
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap:14px;
+    }
+    @media (max-width: 760px){
+      .projects{grid-template-columns:1fr}
+    }
+
+    .project{
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:16px;
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      box-shadow: 0 10px 24px rgba(0,0,0,.18);
+      position:relative;
+      overflow:hidden;
+    }
+    .project::after{
+      content:"";
+      position:absolute; inset:auto -40px -40px auto;
+      width:220px; height:220px; border-radius:999px;
+      background: radial-gradient(circle at 30% 30%, rgba(103,232,249,.22), transparent 55%),
+                  radial-gradient(circle at 70% 60%, rgba(167,139,250,.22), transparent 58%);
+      filter: blur(0px);
+      pointer-events:none;
+    }
+    .project > *{position:relative}
+    .badge{
+      display:inline-flex;
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color:var(--muted);
+      margin-bottom:10px;
+    }
+    .project h3{
+      margin:0 0 6px 0;
+      font-size:16px;
+      letter-spacing:.2px;
+    }
+    .project p{
+      margin:0 0 10px 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.55;
+    }
+    .project ul{
+      margin:0 0 12px 0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.55;
+    }
+    .links{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:4px;
+    }
+    .link{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      color:var(--text);
+      font-size:13px;
+    }
+    .link:hover{background: rgba(255,255,255,.07)}
+    .footer{
+      margin-top:18px;
+      text-align:center;
+      color: rgba(183,196,225,.85);
+      font-size:13px;
+    }
+    .mini{
+      font-size:12px;
+      color: rgba(183,196,225,.75);
+    }
   </style>
 </head>
+
 <body>
-  <h1>Akshata Kumaranarasimha</h1>
-  <p><b>QA Lead / SDET</b> — Python automation + AI/LLM quality (RAG, drift, semantic validation)</p>
-
-  <p>
-    <a class="btn" href="https://github.com/AkshataKumaranarasimha/">GitHub</a>
-    <a class="btn" href="https://www.linkedin.com/in/akshatabharadwaj/">LinkedIn</a>
-    <a class="btn" href="./Akshata_Kumaranarasimha_CV.pdf">Resume</a>
-  </p>
-
-  <h2>Featured Projects</h2>
-  <div class="row">
-    <div class="card">
-      <h3>AI API Quality Automation</h3>
-      <p>Pytest framework to validate AI responses using embeddings + cosine similarity using sckit-learn and openai </sckit-lea></p>
-      <ul>
-        <li>CSV-driven test cases</li>
-        <li>Semantic similarity scoring</li>
-        <li>Latency + hallucination checks</li>
-      </ul>
-      <p><a href="https://github.com/AkshataKumaranarasimha/ai-api-quality-automation">GitHub →</a></p>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand"><span class="dot"></span> Akshata • Portfolio</div>
+      <div class="mini">QA Lead / SDET • Python • AI Quality</div>
     </div>
 
-    <div class="card">
-      <h3>RAG Testing Harness(Working on this)</h3>
-      <p>Validates retrieval relevance and groundedness for RAG pipelines.</p>
-      <p><a href="https://github.com/AkshataKumaranarasimha/qa-lead-interview-playbook">GitHub →</a></p>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <!-- Upload your photo in the repo root as: profile.jpg (or change file name here) -->
+        <img class="avatar" src="profile.jpg" alt="Akshata Kumaranarasimha" />
+
+        <div class="title">
+          <h1>Akshata Kumaranarasimha</h1>
+          <p class="subtitle">
+            QA Lead / SDET — building scalable Python automation and AI/LLM quality systems
+            (RAG eval, drift monitoring, semantic validation).
+          </p>
+
+          <div class="cta">
+            <a class="btn primary" href="resume.pdf">Download Resume</a>
+            <a class="btn" href="https://github.com/AkshataKumaranarasimha/" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/akshatabharadwaj/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="mailto:akshatagururaj18@gmail.com"><small>✉</small> Email</a>
+          </div>
+
+          <div class="pill-row">
+            <span class="pill">Python • Pytest • Service-layer frameworks</span>
+            <span class="pill">API Testing • REST/GraphQL • Contract checks</span>
+            <span class="pill">LLM Evals • Embeddings • Cosine similarity</span>
+            <span class="pill">CI/CD • GitHub Actions • Jenkins</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO GRID -->
+    <section class="grid">
+      <div class="card">
+        <h2>What I Do</h2>
+        <p class="muted" style="margin:0">
+          I help teams ship reliable software by combining strong test strategy, scalable automation,
+          and modern AI quality practices (evaluation datasets, drift detection, and guardrails).
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Skills Snapshot</h2>
+        <ul class="list">
+          <li><b>Automation:</b> Python, Pytest, Selenium, Playwright (learning)</li>
+          <li><b>APIs:</b> REST/GraphQL, Postman, contract testing</li>
+          <li><b>AI Quality:</b> embeddings, semantic scoring, drift, eval harness</li>
+          <li><b>CI/CD:</b> GitHub Actions / Jenkins</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section style="margin-top:16px;">
+      <div class="card">
+        <h2>Featured Projects</h2>
+        <p class="muted" style="margin:0">
+          A few projects that demonstrate AI validation, scalable automation patterns, and test strategy.
+        </p>
+      </div>
+
+      <div class="projects">
+        <article class="project">
+          <div class="badge">Flagship • AI Testing</div>
+          <h3>AI API Quality Automation</h3>
+          <p>Pytest framework to validate AI responses using embeddings + cosine similarity (scikit-learn + OpenAI).</p>
+          <ul>
+            <li>CSV-driven test cases with expected answers</li>
+            <li>Semantic similarity scoring + thresholds</li>
+            <li>Latency checks + hallucination detection rules</li>
+          </ul>
+          <div class="links">
+            <a class="link" href="https://github.com/AkshataKumaranarasimha/ai-api-quality-automation" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="badge">In Progress • RAG Quality</div>
+          <h3>RAG Testing Harness</h3>
+          <p>Validates retrieval relevance and groundedness for RAG pipelines.</p>
+          <ul>
+            <li>Top-k retrieval relevance checks</li>
+            <li>Context faithfulness & groundedness validations</li>
+            <li>Negative tests for “no-context” scenarios</li>
+          </ul>
+          <div class="links">
+            <a class="link" href="https://github.com/AkshataKumaranarasimha/qa-lead-interview-playbook" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="card" style="margin-top:14px;">
+      <h2>Contact</h2>
+      <p class="muted" style="margin:0">
+        Email: <a href="mailto:akshatagururaj18@gmail.com">akshatagururaj18@gmail.com</a> ·
+        LinkedIn: <a href="https://www.linkedin.com/in/akshatabharadwaj/" target="_blank" rel="noopener">akshatabharadwaj</a> ·
+        GitHub: <a href="https://github.com/AkshataKumaranarasimha/" target="_blank" rel="noopener">AkshataKumaranarasimha</a>
+      </p>
+    </section>
+
+    <div class="footer">
+      <div>© <span id="y"></span> Akshata Kumaranarasimha</div>
+      <div class="mini">Built with GitHub Pages</div>
     </div>
   </div>
 
-  <h2>Skills</h2>
-  <ul>
-    <li>Python, Pytest, Selenium, Playwright (learning)</li>
-    <li>API Testing: REST/GraphQL, Postman, contract testing</li>
-    <li>AI Testing: embeddings, cosine similarity, drift, evaluation harness</li>
-    <li>CI/CD: GitHub Actions / Jenkins</li>
-  </ul>
-
-  <h2>Contact</h2>
-  <p>Email: your@email.com · LinkedIn: <a href="https://www.linkedin.com/in/akshatabharadwaj/">Profile</a></p>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
