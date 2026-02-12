@@ -3,104 +3,226 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Akshata Kumaranarasimha — QA Lead / SDET focused on Python automation and AI/LLM quality." />
   <title>Akshata Kumaranarasimha | QA Lead</title>
+
   <style>
+    :root{
+      --bg:#f7f9ff;
+      --card:#ffffff;
+      --text:#0b1220;
+      --muted:#52607a;
+      --border:#e7eaf3;
+      --accent:#0b57d0;
+      --accent2:#6d28d9;
+      --soft:#f1f5ff;
+      --shadow: 0 10px 25px rgba(10, 25, 60, 0.06);
+      --shadow2: 0 8px 20px rgba(10, 25, 60, 0.05);
+    }
+
+    *{box-sizing:border-box}
     body{
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       max-width: 980px;
-      margin: 40px auto;
+      margin: 36px auto;
       padding: 0 16px;
       line-height: 1.6;
-      background: linear-gradient(180deg, #f7f9ff, #ffffff);
-      color: #0b1220;
+      background: linear-gradient(180deg, var(--bg), #ffffff);
+      color: var(--text);
     }
+
+    /* Top bar */
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:14px;
+      padding:10px 12px;
+      border:1px solid var(--border);
+      border-radius:14px;
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(4px);
+      box-shadow: var(--shadow2);
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:700; letter-spacing:.2px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 6px rgba(11,87,208,.10);
+    }
+    .status{
+      font-size:13px;
+      color: var(--muted);
+      display:flex;
+      align-items:center;
+      gap:8px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      text-align:right;
+    }
+    .chip{
+      display:inline-block;
+      padding:4px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background: var(--soft);
+      color: var(--muted);
+      font-size:12px;
+      font-weight:600;
+    }
+
+    /* Hero */
     .hero{
       display:flex;
       gap:18px;
       align-items:center;
       flex-wrap:wrap;
       padding:18px;
-      border:1px solid #e7eaf3;
+      border:1px solid var(--border);
       border-radius:18px;
-      box-shadow: 0 10px 25px rgba(10, 25, 60, 0.06);
-      background: #fff;
+      box-shadow: var(--shadow);
+      background: var(--card);
     }
     .profile-pic{
-      width:120px;
-      height:120px;
-      border-radius:18px;
+      width:128px;
+      height:128px;
+      border-radius:16px;
       object-fit:cover;
-      border:1px solid #e7eaf3;
-      box-shadow: 0 8px 18px rgba(10, 25, 60, 0.10);
+      border:1px solid var(--border);
+      box-shadow: 0 12px 22px rgba(10, 25, 60, 0.10);
       background:#f2f4f8;
     }
     h1{margin:0 0 6px 0; font-size:28px; letter-spacing:0.2px;}
-    .subtitle{margin:0; color:#475569; font-size:15px;}
+    .subtitle{margin:0; color:var(--muted); font-size:15px;}
     .cta{margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;}
+
     .btn{
-      display:inline-block;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
       border:1px solid #d9def0;
       border-radius:12px;
       padding:10px 12px;
       text-decoration:none;
-      color:#0b57d0;
+      color:var(--accent);
       background:#fff;
-      font-weight:600;
+      font-weight:700;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
     }
-    .btn:hover{background:#f6f8ff}
+    .btn:hover{
+      transform: translateY(-1px);
+      background:#f6f8ff;
+      border-color:#cfd7f2;
+    }
     .btn.primary{
       border:none;
       color:#fff;
-      background: linear-gradient(135deg, #0b57d0, #6d28d9);
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
     }
     .btn.primary:hover{filter:brightness(1.03)}
+    .btn .mini{font-size:12px; opacity:.85; font-weight:700}
 
+    /* Pills */
+    .pill-row{margin-top:10px}
+    .pill{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#f8fafc;
+      color:#475569;
+      font-size:12px;
+      margin:8px 8px 0 0;
+      font-weight:600;
+    }
+
+    /* Layout */
     .row{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;}
     .card{
-      border:1px solid #e7eaf3;
+      border:1px solid var(--border);
       border-radius:16px;
       padding:16px;
       flex:1;
-      min-width:280px;
-      background:#fff;
-      box-shadow: 0 8px 20px rgba(10, 25, 60, 0.05);
+      min-width:300px;
+      background: var(--card);
+      box-shadow: var(--shadow2);
     }
     .card h2{margin:0 0 10px 0; font-size:18px;}
     .card h3{margin:0 0 8px 0; font-size:16px;}
     ul{margin:8px 0 0 18px; color:#475569;}
     p{color:#334155}
     .muted{color:#64748b}
-    .footer{margin-top:20px; color:#64748b; font-size:13px; text-align:center;}
-    .pill{
-      display:inline-block;
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid #e7eaf3;
-      background:#f8fafc;
-      color:#475569;
-      font-size:12px;
-      margin:8px 8px 0 0;
+
+    /* QA section */
+    .qa-block{
+      margin-top:12px;
+      padding:12px;
+      border-radius:14px;
+      border:1px dashed #cfd7f2;
+      background: #fbfcff;
+      color:#334155;
     }
+    .qa-block b{color:#0b1220}
+    .qa-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:8px;
+      margin-top:10px;
+    }
+    @media (max-width: 760px){
+      .qa-grid{grid-template-columns:1fr}
+      .status{text-align:left; justify-content:flex-start}
+    }
+    .qa-item{
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:10px 12px;
+      background:#fff;
+    }
+    .qa-item .t{font-weight:800; font-size:13px; margin-bottom:2px}
+    .qa-item .d{font-size:13px; color:var(--muted); margin:0}
+
+    .footer{margin-top:20px; color:#64748b; font-size:13px; text-align:center;}
+    a.inline{color:var(--accent); font-weight:700; text-decoration:none}
+    a.inline:hover{text-decoration:underline}
   </style>
 </head>
 
 <body>
+
+  <div class="topbar">
+    <div class="brand"><span class="dot"></span> Akshata • QA Portfolio</div>
+    <div class="status">
+      <span class="chip">QA Lead / SDET</span>
+      <span class="chip">AI Quality • Automation</span>
+      <span class="chip">Open to roles</span>
+    </div>
+  </div>
 
   <div class="hero">
     <img class="profile-pic" src="profile.jpeg" alt="Akshata Kumaranarasimha" />
 
     <div>
       <h1>Akshata Kumaranarasimha</h1>
-      <p class="subtitle"><b>QA Lead / SDET</b> — Python automation + AI/LLM quality (RAG, drift, semantic validation)</p>
+      <p class="subtitle">
+        <b>QA Lead / SDET</b> — I build scalable Python automation and reliable AI/LLM validation
+        (RAG, drift, semantic checks).
+      </p>
 
       <div class="cta">
-        <a class="btn primary" href="docs/Akshata_Kumaranarasimha_CV.pdf">Download Resume</a>
+        <a class="btn primary" href="docs/Akshata_Kumaranarasimha_CV.pdf" target="_blank" rel="noopener">
+          Download Resume <span class="mini">PDF</span>
+        </a>
         <a class="btn" href="https://github.com/AkshataKumaranarasimha/" target="_blank" rel="noopener">GitHub</a>
         <a class="btn" href="https://www.linkedin.com/in/akshatabharadwaj/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="mailto:akshatagururaj18@gmail.com">Email</a>
       </div>
 
-      <div>
+      <div class="pill-row">
         <span class="pill">Python • Pytest • Selenium</span>
         <span class="pill">API Testing • REST/GraphQL</span>
         <span class="pill">AI Testing • Embeddings • Cosine Similarity</span>
@@ -117,14 +239,46 @@
       <p class="muted">Pytest framework to validate AI responses using embeddings + cosine similarity (scikit-learn + OpenAI).</p>
       <ul>
         <li>CSV-driven test cases</li>
-        <li>Semantic similarity scoring</li>
-        <li>Latency + hallucination checks</li>
+        <li>Semantic similarity scoring + thresholds</li>
+        <li>Latency checks + hallucination detection rules</li>
       </ul>
-      <p><a class="btn" href="https://github.com/AkshataKumaranarasimha/ai-api-quality-automation" target="_blank" rel="noopener">View Repo →</a></p>
+      <p>
+        <a class="btn" href="https://github.com/AkshataKumaranarasimha/ai-api-quality-automation" target="_blank" rel="noopener">
+          View Repo →
+        </a>
+      </p>
 
       <h3>RAG Testing Harness <span class="muted">(In progress)</span></h3>
       <p class="muted">Validates retrieval relevance and groundedness for RAG pipelines.</p>
-      <p><a class="btn" href="https://github.com/AkshataKumaranarasimha/qa-lead-interview-playbook" target="_blank" rel="noopener">View Repo →</a></p>
+      <p>
+        <a class="btn" href="https://github.com/AkshataKumaranarasimha/qa-lead-interview-playbook" target="_blank" rel="noopener">
+          View Repo →
+        </a>
+      </p>
+
+      <div class="qa-block">
+        <b>QA mindset:</b> I like tests that are repeatable, measurable, and explainable.
+        My focus is making quality visible through <b>signals</b> (coverage, latency, flakiness, eval scores, drift).
+        <div class="qa-grid">
+          <div class="qa-item">
+            <div class="t">What I optimize</div>
+            <p class="d">Stability, fast feedback, and meaningful assertions (not just “pass/fail”).</p>
+          </div>
+          <div class="qa-item">
+            <div class="t">How I think</div>
+            <p class="d">Risk-based testing + automation where it gives ROI + metrics for confidence.</p>
+          </div>
+          <div class="qa-item">
+            <div class="t">AI quality approach</div>
+            <p class="d">Golden sets, semantic scoring, guardrails, and drift monitoring.</p>
+          </div>
+          <div class="qa-item">
+            <div class="t">Collaboration</div>
+            <p class="d">Clear bug reports, reproducible steps, and shared ownership with dev/product.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div class="card">
@@ -138,10 +292,15 @@
 
       <h2 style="margin-top:14px;">Contact</h2>
       <p class="muted" style="margin:0">
-        Email: <a href="mailto:akshatagururaj18@gmail.com">akshatagururaj18@gmail.com</a><br/>
-        LinkedIn: <a href="https://www.linkedin.com/in/akshatabharadwaj/" target="_blank" rel="noopener">akshatabharadwaj</a><br/>
-        GitHub: <a href="https://github.com/AkshataKumaranarasimha/" target="_blank" rel="noopener">AkshataKumaranarasimha</a>
+        Email: <a class="inline" href="mailto:akshatagururaj18@gmail.com">akshatagururaj18@gmail.com</a><br/>
+        LinkedIn: <a class="inline" href="https://www.linkedin.com/in/akshatabharadwaj/" target="_blank" rel="noopener">akshatabharadwaj</a><br/>
+        GitHub: <a class="inline" href="https://github.com/AkshataKumaranarasimha/" target="_blank" rel="noopener">AkshataKumaranarasimha</a>
       </p>
+
+      <div class="qa-block" style="margin-top:14px;">
+        <b>Currently exploring:</b>
+        Playwright for modern UI automation, plus stronger RAG eval signals (retrieval relevance + groundedness).
+      </div>
     </div>
   </div>
 
